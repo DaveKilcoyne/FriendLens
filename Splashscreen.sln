@@ -1,0 +1,52 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Express 2012 for Windows Phone
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Splashscreen", "Splashscreen\Splashscreen.csproj", "{2F0D30EE-293F-412A-943C-AEECEDFE2DBD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QSF_WP", "..\QSF.WindowsPhone\QSF_WP.csproj", "{006796F2-1AF4-4C16-9DE8-226C1CA518A8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|ARM = Debug|ARM
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|ARM = Release|ARM
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2F0D30EE-293F-412A-943C-AEECEDFE2DBD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2F0D30EE-293F-412A-943C-AEECEDFE2DBD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2F0D30EE-293F-412A-943C-AEECEDFE2DBD}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{2F0D30EE-293F-412A-943C-AEECEDFE2DBD}.Debug|ARM.ActiveCfg = Debug|ARM
+		{2F0D30EE-293F-412A-943C-AEECEDFE2DBD}.Debug|ARM.Build.0 = Debug|ARM
+		{2F0D30EE-293F-412A-943C-AEECEDFE2DBD}.Debug|ARM.Deploy.0 = Debug|ARM
+		{2F0D30EE-293F-412A-943C-AEECEDFE2DBD}.Debug|x86.ActiveCfg = Debug|x86
+		{2F0D30EE-293F-412A-943C-AEECEDFE2DBD}.Debug|x86.Build.0 = Debug|x86
+		{2F0D30EE-293F-412A-943C-AEECEDFE2DBD}.Debug|x86.Deploy.0 = Debug|x86
+		{2F0D30EE-293F-412A-943C-AEECEDFE2DBD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2F0D30EE-293F-412A-943C-AEECEDFE2DBD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2F0D30EE-293F-412A-943C-AEECEDFE2DBD}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{2F0D30EE-293F-412A-943C-AEECEDFE2DBD}.Release|ARM.ActiveCfg = Release|ARM
+		{2F0D30EE-293F-412A-943C-AEECEDFE2DBD}.Release|ARM.Build.0 = Release|ARM
+		{2F0D30EE-293F-412A-943C-AEECEDFE2DBD}.Release|ARM.Deploy.0 = Release|ARM
+		{2F0D30EE-293F-412A-943C-AEECEDFE2DBD}.Release|x86.ActiveCfg = Release|x86
+		{2F0D30EE-293F-412A-943C-AEECEDFE2DBD}.Release|x86.Build.0 = Release|x86
+		{2F0D30EE-293F-412A-943C-AEECEDFE2DBD}.Release|x86.Deploy.0 = Release|x86
+		{006796F2-1AF4-4C16-9DE8-226C1CA518A8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{006796F2-1AF4-4C16-9DE8-226C1CA518A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{006796F2-1AF4-4C16-9DE8-226C1CA518A8}.Debug|ARM.ActiveCfg = Debug|ARM
+		{006796F2-1AF4-4C16-9DE8-226C1CA518A8}.Debug|ARM.Build.0 = Debug|ARM
+		{006796F2-1AF4-4C16-9DE8-226C1CA518A8}.Debug|x86.ActiveCfg = Debug|x86
+		{006796F2-1AF4-4C16-9DE8-226C1CA518A8}.Debug|x86.Build.0 = Debug|x86
+		{006796F2-1AF4-4C16-9DE8-226C1CA518A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{006796F2-1AF4-4C16-9DE8-226C1CA518A8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{006796F2-1AF4-4C16-9DE8-226C1CA518A8}.Release|ARM.ActiveCfg = Release|ARM
+		{006796F2-1AF4-4C16-9DE8-226C1CA518A8}.Release|ARM.Build.0 = Release|ARM
+		{006796F2-1AF4-4C16-9DE8-226C1CA518A8}.Release|x86.ActiveCfg = Release|x86
+		{006796F2-1AF4-4C16-9DE8-226C1CA518A8}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

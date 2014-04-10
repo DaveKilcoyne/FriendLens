@@ -1,0 +1,124 @@
+﻿<phone:PhoneApplicationPage
+    x:Class="Splashscreen.MainMenu"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:telerikPrimitives="clr-namespace:Telerik.Windows.Controls;assembly=Telerik.Windows.Controls.Primitives"
+    xmlns:telerikCore="clr-namespace:Telerik.Windows.Controls;assembly=Telerik.Windows.Core"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:Splashscreen"
+    xmlns:system="clr-namespace:System;assembly=mscorlib"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="PortraitOrLandscape" Orientation="Portrait"
+    mc:Ignorable="d"
+    shell:SystemTray.IsVisible="False">
+
+    <phone:PhoneApplicationPage.ApplicationBar>
+        <shell:ApplicationBar Opacity="0.5">
+            <shell:ApplicationBarIconButton x:Name="Logout" IconUri="/icons/appbar_logout.png" IsEnabled="True" Text="logout" Click="OnLogout_Click"/>
+        </shell:ApplicationBar>
+    </phone:PhoneApplicationPage.ApplicationBar>
+
+    <Grid x:Name="LayoutRoot">
+        <phone:Panorama HorizontalAlignment="Left" Height="800" Title="FriendLens" VerticalAlignment="Top" Width="480">
+            <phone:Panorama.Background>
+                <ImageBrush ImageSource="Background.jpg"/>
+            </phone:Panorama.Background>
+            <phone:PanoramaItem CacheMode="{x:Null}" Header="profile" Name="Panorama">
+                <phone:PanoramaItem.RenderTransform>
+                    <TranslateTransform/>
+                </phone:PanoramaItem.RenderTransform>
+                <Grid>
+
+                    <telerikPrimitives:RadHubTile x:Name="tile" ImageSource="world.png" MouseLeftButtonUp="RunContactsTransition"                 
+                                Margin="239,10,10,302">
+                        <telerikPrimitives:RadHubTile.BackContent>
+                            <Border Background="{StaticResource PhoneAccentBrush}">
+                                <TextBlock HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
+                        FontSize ="25.00"
+                        Text = "Nearby" TextWrapping="Wrap"
+                        />
+                            </Border>
+                        </telerikPrimitives:RadHubTile.BackContent>
+                    </telerikPrimitives:RadHubTile>
+
+                    <telerikPrimitives:RadSlideHubTile x:Name="meTile" Title="Me" FontSize="25.00" Margin="10,10,239,302" MouseLeftButtonUp="RunMeTransition">
+                        <telerikPrimitives:RadSlideHubTile.Picture>
+                            <Image x:Name="ProfileImage" Source="{Binding PictureFileUri}" Stretch="UniformToFill"/>
+                        </telerikPrimitives:RadSlideHubTile.Picture>
+                    </telerikPrimitives:RadSlideHubTile>
+
+                    <telerikPrimitives:RadMosaicHubTile 
+                                                Width="171"
+                                                Height="Auto"
+                                                FontSize="25"
+                                                Margin="239,210,0,102"
+                                                HorizontalAlignment="Left"
+                                                Title="Friends"
+                                                Padding="12, 0, 0, 8"
+                                                MouseLeftButtonUp="LoadFriends"
+                                                x:Name="mosaicTile" >
+                    </telerikPrimitives:RadMosaicHubTile>
+
+                </Grid>
+            </phone:PanoramaItem>
+            <phone:PanoramaItem CacheMode="{x:Null}" Header="options">
+                <phone:PanoramaItem.RenderTransform>
+                    <TranslateTransform/>
+                </phone:PanoramaItem.RenderTransform>
+                <Grid>
+                    <telerikPrimitives:RadSlideHubTile Title="Feedback"
+                                                             FontSize="{StaticResource PhoneFontSizeMedium}"
+                                                             FontFamily="{StaticResource PhoneFontFamilyLight}"
+                                                             Width="auto"
+                                                             Height="170"
+                                                             Margin="10,210,290,103">
+
+                        <telerikPrimitives:RadSlideHubTile.Picture>
+                            <Image Source="feedback.jpg"
+                                        Stretch="UniformToFill"/>
+                        </telerikPrimitives:RadSlideHubTile.Picture>
+                    </telerikPrimitives:RadSlideHubTile>
+
+                    <telerikPrimitives:RadSlideHubTile Title="About"
+                                                             FontSize="{StaticResource PhoneFontSizeMedium}"
+                                                             FontFamily="{StaticResource PhoneFontFamilyLight}"
+                                                             Width="171"
+                                                            MouseLeftButtonUp="navAbout"
+                                                             Height="170"
+                                                             Margin="10,11,239,302">
+
+                        <telerikPrimitives:RadSlideHubTile.Picture>
+                            <Image Source="about.png"
+                                        Stretch="UniformToFill"/>
+                        </telerikPrimitives:RadSlideHubTile.Picture>
+                    </telerikPrimitives:RadSlideHubTile>
+
+                    <telerikPrimitives:RadHubTile x:Name="requests" ImageSource="icons/people.png"                 
+                                Margin="239,10,10,302">
+                        <telerikPrimitives:RadHubTile.BackContent>
+                            <Border Background="{StaticResource PhoneAccentBrush}">
+                                <TextBlock HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
+                        FontSize ="25.00"
+                        Text = "Requests" TextWrapping="Wrap"
+                        />
+                            </Border>
+                        </telerikPrimitives:RadHubTile.BackContent>
+                    </telerikPrimitives:RadHubTile>
+
+                </Grid>
+            </phone:PanoramaItem>
+        </phone:Panorama>
+    </Grid>
+
+    <!--LayoutRoot is the root grid where all page content is placed-->
+
+</phone:PhoneApplicationPage>
+    
+    

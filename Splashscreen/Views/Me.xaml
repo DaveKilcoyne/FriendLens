@@ -1,0 +1,46 @@
+﻿<phone:PhoneApplicationPage
+    x:Class="Splashscreen.Views.MeTile"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:ARControls="clr-namespace:GART.Controls;assembly=GART.WP8"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    mc:Ignorable="d"
+    shell:SystemTray.IsVisible="True">
+
+    <phone:PhoneApplicationPage.ApplicationBar>
+        <shell:ApplicationBar Opacity="0.7">
+            <shell:ApplicationBarIconButton x:Name="RotateButton" IconUri="/icons/refresh.png" IsEnabled="True" Text="refresh" Click="RefreshButton_Click"/>         
+            <shell:ApplicationBar.MenuItems>
+                <shell:ApplicationBarMenuItem x:Name="ClearLocationsMenu" Text="clear Friends" Click="ClearLocationsMenu_Click" />
+            </shell:ApplicationBar.MenuItems>
+        </shell:ApplicationBar>
+    </phone:PhoneApplicationPage.ApplicationBar>
+
+    <Grid x:Name="LayoutRoot">
+        <TextBlock Text="Nearby" Margin="10,15,-1,521" Style="{StaticResource PhoneTextTitle1Style}" FontSize="120"/>
+        <TextBlock Text="Longditude" Margin="289,165,14,480" Style="{StaticResource PhoneTextTitle1Style}" FontSize="36" Foreground="#FF00FF17"/>
+        <TextBlock Text="Latitude" Margin="10,165,293,480" Style="{StaticResource PhoneTextTitle1Style}" FontSize="36" Foreground="#FF00FF17"/>
+
+        <TextBlock x:Name="LatitudeTextBlock" Margin="10,216,283,447"/>
+        <TextBlock x:Name="LongitudeTextBlock" Margin="289,216,14,447"/>
+
+        <ARControls:ARDisplay x:Name="ARDisplay" d:LayoutOverrides="Width" AttitudeRefreshRate="50" MovementThreshold="1">
+            <ARControls:OverheadMap x:Name="OverheadMap" ZoomLevel="0.65" Margin="0,260,10,0" HorizontalAlignment="Right" Width="460" />
+            <ARControls:HeadingIndicator x:Name="HeadingIndicator"  HorizontalAlignment="Center" VerticalAlignment="Center" Margin="90,322,90,74" />
+        </ARControls:ARDisplay>
+        </Grid>
+
+        <!-- <Grid.Background>
+            <ImageBrush ImageSource="BackgroundBlue.jpg" Stretch="None" />
+       </Grid.Background> -->
+
+    <!--LayoutRoot is the root grid where all page content is placed-->
+
+</phone:PhoneApplicationPage>
